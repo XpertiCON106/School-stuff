@@ -1,10 +1,8 @@
-# Program Name: userAge.s
-# Author: Tahalil Morsilin
+# Tahalil Morsilin
 # Date: 02/13/2026
 
 .text
 .global main
-
 
 main:
     # Save return address to stack (Manual Push)

@@ -1,4 +1,4 @@
-# Author: Tahalil Morsilin
+# Tahalil Morsilin
 # Date: 02/13/2026
 
 .text
