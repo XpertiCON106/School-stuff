@@ -17,7 +17,6 @@ main:
     LDR lr, [sp, #0]
     ADD sp, sp, #4
     MOV pc, lr
-# END OF main
 
 .data
     # String with escaped quotes

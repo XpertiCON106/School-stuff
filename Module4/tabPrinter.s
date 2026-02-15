@@ -9,7 +9,7 @@ main:
     SUB sp, sp, #4
     STR lr, [sp, #0]
 
-    # Load message and print
+    # Load and print message
     LDR r0, =tabMessage
     MOV r1, #5
     BL printf
