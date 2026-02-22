@@ -1,6 +1,6 @@
-// fahrenheitToCelsiusMain.s
+// multiplyByTenMain.s
 // Author: Tahalil I Morsilin
-// Date: 02/16/2026
+// Date: 02/26/2026
 
 .text
 .global main
@@ -13,29 +13,20 @@ main:
     LDR r0, =prompt
     BL printf
 
-    // read input
+    // read
     LDR r0, =inputFormat
     LDR r1, =userInput
     BL scanf
 
-    // load value
+    // load
     LDR r0, =userInput
     LDR r0, [r0]
 
-    // Calculate C = (F - 32) * 5 / 9
-    // subtract 32
-    SUB r0, r0, #32
+    LSL r1, r0, #3
+    LSL r2, r0, #1
+    ADD r1, r1, r2
 
-    // multiply by 5
-    MOV r1, #5
-    MUL r0, r0, r1
-
-    // divide by 9
-    MOV r1, #9
-    SDIV r0, r0, r1
-
-    // print and return
-    MOV r1, r0
+    // print and return 
     LDR r0, =outputMessage
     BL printf
 
@@ -44,7 +35,7 @@ main:
     MOV pc, lr
 
 .data
-    prompt: .asciz "Enter temperature in Fahrenheit: "
+    prompt: .asciz "Enter number to multiply by 10: "
     inputFormat: .asciz "%d"
-    outputMessage: .asciz "Temperature in Celsius: %d\n"
+    outputMessage: .asciz "Result: %d\n"
     userInput: .word 0
