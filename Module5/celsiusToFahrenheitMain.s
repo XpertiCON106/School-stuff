@@ -33,7 +33,7 @@ main:
     // add 32
     ADD r0, r0, #32
 
-    // print and return 
+    // print and return
     MOV r1, r0
     LDR r0, =outputMessage
     BL printf
