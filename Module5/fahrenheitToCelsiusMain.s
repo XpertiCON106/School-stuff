@@ -22,7 +22,6 @@ main:
     LDR r0, =userInput
     LDR r0, [r0]
 
-    // Calculate C = (F - 32) * 5 / 9
     // subtract 32
     SUB r0, r0, #32
 

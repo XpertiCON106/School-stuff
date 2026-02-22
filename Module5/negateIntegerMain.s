@@ -9,26 +9,24 @@ main:
     SUB sp, sp, #4
     STR lr, [sp, #0]
 
-    // prompt user
+    // prompt
     LDR r0, =prompt
     BL printf
 
-    // read input
+    // read
     LDR r0, =inputFormat
     LDR r1, =userInput
     BL scanf
 
-    // load input
+    // load
     LDR r0, =userInput
     LDR r0, [r0]
 
-    // 1 complement
     MVN r1, r0
 
-    // adding 1
     ADD r1, r1, #1
 
-    // printing and returning
+    // print and return 
     LDR r0, =outputMessage
     BL printf
 

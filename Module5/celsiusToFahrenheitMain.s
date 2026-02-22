@@ -22,7 +22,6 @@ main:
     LDR r0, =userInput
     LDR r0, [r0]
 
-    // Calculate F = (C * 9) / 5 + 32
     // multiply by 9
     MOV r1, #9
     MUL r0, r0, r1

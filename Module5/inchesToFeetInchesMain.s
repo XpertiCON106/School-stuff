@@ -27,7 +27,7 @@ main:
     MUL r3, r2, r1
     SUB r3, r0, r3
 
-    // printing and return 
+    // print and return 
     MOV r1, r2
     MOV r2, r3
     LDR r0, =outputMessage
