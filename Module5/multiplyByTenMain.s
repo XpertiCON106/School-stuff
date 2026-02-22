@@ -1,6 +1,6 @@
 // multiplyByTenMain.s
-// Author: Tahalil I Morsilin
-// Date: 02/26/2026
+// Tahalil I Morsilin
+// 02/26/2026
 
 .text
 .global main

@@ -1,6 +1,6 @@
 // celsiusToFahrenheitMain.s
-// Author: Tahalil I Morsilin
-// Date: 02/20/2026
+// Tahalil I Morsilin
+// 02/20/2026
 
 .text
 .global main

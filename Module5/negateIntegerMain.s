@@ -1,6 +1,6 @@
 // negateIntegerMain.s
-// Author: Tahalil I Morsilin
-// Date: 02/22/2026
+// Tahalil I Morsilin
+// 02/22/2026
 
 .text
 .global main
