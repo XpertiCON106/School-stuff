@@ -2,7 +2,7 @@
 # Assignment8
 # 03/15/2026
 .text
-.global main [cite: 101]
+.global main
 
 main:
     SUB sp, sp, #4
