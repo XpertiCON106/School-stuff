@@ -39,7 +39,7 @@ ChkAlphaLOG:
     AND r3, r3, r1          // if lowercase,r3 = 1 else r3 = 0
 
     // now we check for both uppercase and lowercase
-    OR r0, r2, r3           // if uppercase or lowercase then r0 = 1 or set to true
+    ORR r0, r2, r3           // if uppercase or lowercase then r0 = 1 or set to true
 
     LDR lr, [sp]
     ADD sp, sp, #4
