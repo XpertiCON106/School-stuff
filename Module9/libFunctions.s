@@ -1,5 +1,5 @@
 // Tahalil Morsilin
-// Module 9 Assignment
+// EN605 Module 9 Assignment
 // 03/29/2026
 
 .global ChkAlphaLOG
@@ -10,7 +10,7 @@
 .text
 
 // ChkAlphaLOG
-// by using logical operations, we wil check if an inpt is alphabetic
+// by using logical operations, we wil check if an input is alphabetic
 // returns 1 which is true or 0 for false  in r0.
 ChkAlphaLOG:
     SUB sp, sp, #4          // allocate the space on the stack
