@@ -30,7 +30,7 @@ in_val1:       .word 0
 in_val2:       .word 0
 in_val3:       .word 0
 in_score:      .word 0
-in_name:       .space 64          // this is for the allocation 
+in_name:       .space 64          // this is for the allocation
 
 .text
 main:
@@ -65,10 +65,10 @@ main:
     BL scanf
 
     LDR r0, =in_char
-    LDR r0, [r0]            
-    BL ChkAlphaNOLOG        
+    LDR r0, [r0]
+    BL ChkAlphaNOLOG
 
-    CMP r0, #1              
+    CMP r0, #1
     MOVEQ r1, #'Y'
     MOVNE r1, #'N'
 
@@ -104,7 +104,7 @@ main:
     LDR r1, [r1]
     LDR r2, =in_val3
     LDR r2, [r2]
-    
+
     BL findMAXOf3
 
     MOV r1, r0

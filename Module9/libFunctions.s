@@ -20,26 +20,26 @@ ChkAlphaLOG:
     MOV r2, #0
     CMP r0, #0x41           // comparing with 'A'
     ADDGE r2, #1            // if >= 'A', set bit 0 to 1
-    
+
     MOV r3, #0
     CMP r0, #0x5A           // comparing with 'Z'
-    ADDLE r3, #1            // if <= 'Z', set bit 0 to 1 
-    
+    ADDLE r3, #1            // if <= 'Z', set bit 0 to 1
+
     AND r2, r2, r3          // if uppercase, r2 = 1 else r2 = 0
 
     // check lowercase 'a' = 0x61 and'z' = 0x7A
     MOV r1, #0
     CMP r0, #0x61           // comparing with 'a'
     ADDGE r1, #1            // if >= 'a', set bit 0 to 1
-    
+
     MOV r3, #0
     CMP r0, #0x7A           // comparing with 'z'
     ADDLE r3, #1            // if <= 'z', set bit 0 to 1
-    
+
     AND r3, r3, r1          // if lowercase,r3 = 1 else r3 = 0
-    
+
     // now we check for both uppercase and lowercase
-    OR r0, r2, r3           // if uppercase || lowercase then r0 = 1 or set to true
+    OR r0, r2, r3           // if uppercase or lowercase then r0 = 1 or set to true
 
     LDR lr, [sp]
     ADD sp, sp, #4
