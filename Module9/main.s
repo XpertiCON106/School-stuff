@@ -37,7 +37,7 @@ main:
     SUB sp, sp, #4
     STR lr, [sp]
 
-    // 1. testing ChkAlphaLOG
+    // testing ChkAlphaLOG
     LDR r0, =prmpt_char
     BL printf
 

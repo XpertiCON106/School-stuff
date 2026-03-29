@@ -39,7 +39,7 @@ ChkAlphaLOG:
     AND r3, r3, r1          // if lowercase,r3 = 1 else r3 = 0
 
     // now we check for both uppercase and lowercase
-    ORR r0, r2, r3           // if uppercase or lowercase then r0 = 1 or set to true
+    ORR r0, r2, r3          // if uppercase or lowercase then r0 = 1 or set to true
 
     LDR lr, [sp]
     ADD sp, sp, #4
@@ -100,7 +100,7 @@ Grade:
 
     CMP r0, #0              // check if score < 0
     BLT error_grade
-    CMP r0, #100            // check if score > 100
+    CMP r0, #100          // check if score > 100
     BGT error_grade
 
     CMP r0, #90             // if score >= 90
@@ -125,7 +125,7 @@ grade_F:
     B end_grade
 
 error_grade:
-    MOV r0, #'E' // this is for error 'E'
+    MOV r0, #'E'
 
 end_grade:
     LDR lr, [sp]
