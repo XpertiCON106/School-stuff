@@ -109,7 +109,7 @@ Grade:
     BGE grade_B
     CMP r0, #70             // elsif score >= 70
     BGE grade_C
-    B grade_F               // else [cite: 197]
+    B grade_F               // else
 
 grade_A:
     MOV r0, #'A'
