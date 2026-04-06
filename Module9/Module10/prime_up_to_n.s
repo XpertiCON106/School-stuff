@@ -1,6 +1,7 @@
 // Tahalil Morsilin
 // EN605
 // Module 10
+// 04/05/2026
 
 .data
 prompt:     .asciz "Enter n: "
@@ -34,7 +35,7 @@ main:
     // Outer Loop Initialization
     MOV r4, #3                  // start testing at 3
 
-outer_loop_start:               
+outer_loop_start:
     CMP r4, r5                  // check end condition
     BGT outer_loop_end
 
@@ -72,7 +73,7 @@ not_prime:
     ADD r4, r4, #1
     B outer_loop_start          // Branch to start label
 
-outer_loop_end:                 
+outer_loop_end:
     // Restore registers and exit
     LDR lr, [sp, #0]
     LDR r4, [sp, #4]
@@ -81,6 +82,6 @@ outer_loop_end:
     LDR r7, [sp, #16]
     LDR r8, [sp, #20]
     ADD sp, sp, #24
-    
+
     MOV r0, #0
     BX lr

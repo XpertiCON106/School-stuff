@@ -1,5 +1,6 @@
 // Tahalil Morsilin
 // EN605
+// 04/05/2026
 
 .data
 prompt:         .asciz "\nEnter a number (-1 to exit): "
@@ -103,6 +104,5 @@ end_program:
     LDR r7, [sp, #16]
     LDR r8, [sp, #20]
     ADD sp, sp, #24
-    
     MOV r0, #0
     BX lr
