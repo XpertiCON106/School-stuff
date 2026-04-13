@@ -19,7 +19,7 @@ n_val:      .word 0
 MultHelper:
     MOV r2, r0
     MOV r0, #0
-    
+
     CMP r1, #0              // If b == 0, return 0 immediately
     BEQ MultHelper_Return
 
