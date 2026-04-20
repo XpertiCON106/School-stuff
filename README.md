@@ -1,1 +1,1 @@
-# School-stuff, pls do not clone lmao
+# Computer Organizations Assignments -  Johns Hopkins University
