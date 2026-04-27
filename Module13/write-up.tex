@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{amsmath}
+
+\title{Module 13 Assignment}
+\author{Tahalil I Morsilin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Problem 1: Mod-4 Counter}
+The Mod-4 counter transitions through the binary sequence 00, 01, 10, and 11. To optimize the circuit, the clock was abstracted from the next-state logic, allowing for a direct derivation of the boolean equations based solely on the current state. The next-state logic for the two D flip-flops (Q1, Q0) is defined as:
+\begin{align*}
+    Q0_{new} &= \overline{Q0} \\
+    Q1_{new} &= Q1 \oplus Q0
+\end{align*}
+The circuit architecture relies on a NOT gate to continuously invert Q0, and a 2-input XOR gate to determine Q1. Both registers are driven by a shared clock signal. Simulation confirms the expected 0-to-3 sequence.
+
+\section*{Problem 2: Mod-6 ROM Counter}
+To implement the Mod-6 counter (states 0 through 5), a microprogrammed architecture was deployed to bypass complex combinational logic. This design leverages three D flip-flops to maintain state and an 8x3 ROM to dictate transitions. 
+
+The ROM functions as a lookup table where the current state serves as the memory address, and the stored data provides the subsequent state. The memory addresses 0 through 7 were explicitly programmed with the hex sequence: \texttt{1, 2, 3, 4, 5, 0, 0, 0}. Splitters were utilized to route the 3-bit flip-flop output into the ROM address port, and to distribute the 3-bit ROM data back to the register inputs. Execution of the circuit validates the 0-to-5 loop, handling the hardware state programming efficiently.
+
+\end{document}
